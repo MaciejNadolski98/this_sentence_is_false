@@ -1,0 +1,16 @@
+[package]
+name = "this_sentence_is_false"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[dependencies]
+bevy = { version = "0.16", features = ["dynamic_linking"] } 
+bevy-inspector-egui = "0.31"
+rand = "0.8.5"
+rand_distr = "0.4.3"
